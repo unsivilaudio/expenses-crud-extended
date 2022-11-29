@@ -35,6 +35,51 @@
   border-radius: 12px;
 }
 
+.expense-item__actions {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.expense-item__actions button {
+  cursor: pointer;
+  color: #ecedef;
+  border-color: #ecedef;
+  font: inherit;
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: uppercase;
+  border: none;
+  background: none;
+  outline: none;
+  padding: 3px 12px;
+  transition: all 0.3s ease;
+  border-radius: 7px;
+}
+
+.expense-item__actions .expense-item__edit {
+  color: #c4722f;
+  border: 1px solid #c4722f;
+}
+
+.expense-item__actions .expense-item__edit:hover {
+  color: #ecedef;
+  border-color: currentColor;
+  background: #a0560c;
+}
+
+.expense-item__actions .expense-item__delete {
+  color: #c9443a;
+  border: 1px solid #c9443a;
+}
+
+.expense-item__actions .expense-item__delete:hover {
+  color: #ecedef;
+  border-color: currentColor;
+  background: #8f1911;
+}
+
 @media (min-width: 580px) {
   .expense-item__description {
     flex-direction: row;

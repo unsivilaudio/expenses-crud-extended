@@ -19,13 +19,15 @@ const Expenses = (props) => {
 
   return (
     <div>
-      <Card className='expenses'>
-        <ExpensesFilter
-          selected={filteredYear}
-          onChangeFilter={filterChangeHandler}
-        />
+      <Card className="expenses">
+        <ExpensesFilter selected={filteredYear} onChangeFilter={filterChangeHandler} />
         <ExpensesChart expenses={filteredExpenses} />
-        <ExpensesList items={filteredExpenses} />
+        <ExpensesList
+          items={filteredExpenses}
+          // Passing down both callbacks from App.js
+          onDeleteExpense={props.onDeleteExpense}
+          onEditExpense={props.onEditExpense}
+        />
       </Card>
     </div>
   );
